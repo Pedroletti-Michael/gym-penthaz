@@ -381,15 +381,26 @@
 	<!-- Section contact -->
 	<div class=" bg-light pb-5 pt-5">
 		<div class="container">
-			<form>
-				<div class="mb-3">
-					<label for="exampleFormControlInput1" class="form-label">Email address</label>
-					<input type="email" class="form-control" id="exampleFormControlInput1"
-						placeholder="name@example.com">
+			<form class="row g-3">
+				<div class="col-md-6">
+					<label for="inputEmail4" class="form-label">Nom</label>
+					<input type="text" class="form-control" id="inputEmail4">
+				</div>
+				<div class="col-md-6">
+					<label for="inputPassword4" class="form-label">Prénom</label>
+					<input type="text" class="form-control" id="inputPassword4">
 				</div>
 				<div class="mb-3">
-					<label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+					<label for="exampleFormControlInput1" class="form-label">Adresse e-mail</label>
+					<input type="email" class="form-control" id="exampleFormControlInput1"
+						placeholder="joseph@example.ch">
+				</div>
+				<div class="mb-3">
+					<label for="exampleFormControlTextarea1" class="form-label">Votre message :</label>
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+				</div>
+				<div class="col-12">
+					<button type="submit" class="btn btn-primary">Envoyer</button>
 				</div>
 			</form>
 		</div>
