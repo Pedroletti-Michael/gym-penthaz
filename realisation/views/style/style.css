@@ -1,0 +1,18 @@
+#btn-back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+}
+
+.bg-std {
+	background-color: #558C8C !important;
+}
+
+.text-std {
+	color: #cd5c5c !important;
+}
+
+.card-team {
+	background-color: #D1FFFF !important;
+}
