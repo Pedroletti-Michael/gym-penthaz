@@ -20,7 +20,7 @@
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="?">
 				<img src="/views/images/logo.webp" alt="" width="156" height="86"
 					class="d-inline-block align-text-top">
 			</a>
@@ -31,13 +31,13 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="#">Galerie</a>
+						<a class="nav-link" href="?action=gallery">Galerie</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Les DVDs</a>
+						<a class="nav-link" href="?action=dvd">Les DVDs</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Paramètres</a>
+						<a class="nav-link" href="?action=adminPanel">Paramètres</a>
 					</li>
 				</ul>
 			</div>

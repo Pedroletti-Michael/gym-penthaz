@@ -13,46 +13,47 @@ require_once 'view.php';
  * @param mixed $pwd -> Password
  * @return void
  */
-function login($userMail, $pwd){
-    if($userMail != '' && $pwd != ''){
-        $return = "";
-        if($return != false){
-            createSession($return[0]['email'], $return[0]['lastname'], $return[0]['firstname']);
-
-            $_SESSION['msg'] = 'loginSuccess';
-            displayHome();
-        }
-        else{
-            $_SESSION['msg'] = 'loginError';
-            displayLogin();
-        }
-    }
-    else{
-        $_SESSION['msg'] = 'empty';
-        displayLogin();
-    }
-}
-
-/**
- * Function used to create a session during the connection
- * @param string $email
- * @param string $lastname
- * @param string $firstname
- * @return void
- */
-function createSession($email, $lastname, $firstname){
-    $_SESSION['email'] = $email;
-    $_SESSION['username'] = $lastname. " " .$firstname;
-}
-
-/**
- * Function used to log out from the website
- * @return void
- */
-function logOut()
+function login($usrMail, $pwd)
 {
-    $_SESSION = array();
-    session_destroy();
+	if ($$usrMail != '' && $pwd != '') {
+		require_once 'models/users.php';
 
-    displayLogin();
+		$return = checkLogin($usrMail, $pwd);
+		if ($return != false) {
+			createSession($return[0]['email'], $return[0]['lastname'], $return[0]['firstname']);
+
+			$_SESSION['msg'] = 'loginSuccess';
+			displayHome();
+		} else {
+			$_SESSION['msg'] = 'loginError';
+			displayLogin();
+		}
+	} else {
+		$_SESSION['msg'] = 'empty';
+		displayLogin();
+	}
+}
+
+/**
+ * Function needed to create a new user into the database.
+ * This function will be disabled after the devlopment period.
+ * @param string $usr
+ * @param string $pwd
+ * @return bool
+ */
+function addUser($usr, $pwd)
+{
+	require_once 'models/databaseConnector.php';
+
+	$pwd = password_hash($pwd, PASSWORD_DEFAULT);
+	$query = "INSERT INTO `users` (`email`, `password`) VALUES ('" . $usr . "', '" . $pwd . "')";
+
+	try {
+		executeQuery($query, 'insert');
+		$return = true;
+	} catch (Exception $e) {
+		echo "<script>console.log('" . $e . "');</script>";
+		$return = false;
+	}
+	return $return;
 }

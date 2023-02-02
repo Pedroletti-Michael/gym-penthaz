@@ -21,14 +21,9 @@ ob_start();
 				<h1>Qui sommes-nous ?</h1>
 				<p>
 					Gym pour Tous, c’est bien là la vocation de notre société. Fondée en 1977, c’est la plus
-					grande
-					de
-					notre
-					joli village. Elle compte aujourd’hui plus de 220 membres. Tu trouveras certainement un
-					groupe
-					qui
-					correspondra à tes envies.
-
+					grande de notre joli village. Elle compte aujourd’hui plus de 220 membres.
+					Tu trouveras certainement un groupe qui correspondra à tes envies.
+					<br>
 					Alors n’hésite pas à passer nous voir ou encore à nous contacter.
 				</p>
 			</div>
@@ -41,7 +36,8 @@ ob_start();
 <!-- Section horaires -->
 <div class="bg-std pb-5">
 	<div class="container">
-		<h1 class="text-center pt-5">Horaires</h1>
+		<h1 class="text-center pb-4 pt-5">Horaires</h1>
+
 		<table class="table table-hover">
 			<thead>
 				<tr>
@@ -164,6 +160,7 @@ ob_start();
 <div class="bg-std pb-5">
 	<div class="container">
 		<h1 class="text-center pt-5">Présentation de l'équipe</h1>
+
 		<div class="row row-cols-1 row-cols-md-3 g-4 align-content-center pt-5 pb-5">
 			<div class="col">
 				<div class="card card-team h-100">
@@ -292,6 +289,8 @@ ob_start();
 <!-- Section galerie -->
 <div class="bg-light pb-5 pt-5">
 	<div class="container">
+		<h1 class=" text-center pb-4 pt-5">Galerie photo</h1>
+
 		<div class="row row-cols-1 row-cols-md-3 g-4">
 			<div class="col">
 				<div class="card h-100">
@@ -331,6 +330,8 @@ ob_start();
 <!-- Section contact -->
 <div class="bg-std pb-5 pt-5">
 	<div class="container">
+		<h1 class=" text-center pb-4 pt-5">Nous contacter</h1>
+
 		<form class="row g-3">
 			<div class="col-md-6">
 				<label for="inputEmail4" class="form-label">Nom</label>

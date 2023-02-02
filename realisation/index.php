@@ -31,12 +31,24 @@ if (isset($_GET['action'])) {
 
 		/**== Action for login ==**/
 		case 'requestLogin':
-			login($_POST['usrMail'], $_POST['pwd']);
+			login($_POST['inputEmail'], $_POST['inputPassword']);
+			break;
+
+		case 'addUser':
+			addUser($_GET['usr'], $_GET['pwd']);
 			break;
 
 		/**== Action for log out of the web platform ==**/
 		case 'logOut':
 			logOut();
+			break;
+
+		case 'gallery':
+			displayGallery();
+			break;
+
+		case 'dvd':
+			displayDvd();
 			break;
 
 		/**== Action to display the admin panel ==**/

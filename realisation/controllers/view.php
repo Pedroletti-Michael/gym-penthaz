@@ -26,8 +26,25 @@ function displayLogin()
 function displayHome()
 {
 	//TODO we will need to get information from the DB that contain all the info for the homepage
-
 	require 'views/home.php';
+}
+
+/**
+ * Function used to display gallery page
+ * @return void
+ */
+function displayGallery()
+{
+	require 'views/gallery.php';
+}
+
+/**
+ * Function used to display DvD page
+ * @return void
+ */
+function displayDvd()
+{
+	require 'views/dvd.php';
 }
 
 /**
