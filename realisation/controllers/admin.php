@@ -15,12 +15,12 @@ require_once 'view.php';
  */
 function login($usrMail, $pwd)
 {
-	if ($$usrMail != '' && $pwd != '') {
+	if ($usrMail != '' && $pwd != '') {
 		require_once 'models/users.php';
 
 		$return = checkLogin($usrMail, $pwd);
 		if ($return != false) {
-			createSession($return[0]['email'], $return[0]['lastname'], $return[0]['firstname']);
+			createSession($usrMail);
 
 			$_SESSION['msg'] = 'loginSuccess';
 			displayHome();

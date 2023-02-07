@@ -5,6 +5,15 @@
  * Description : login page
  **/
 
+function getAllUsers()
+{
+	require_once 'models/databaseConnector.php';
+
+	$query = "SELECT `email`, `password` FROM `users`;";
+	return (executeQuery($query));
+}
+
+
 /**
  * Function used to verify if the user exist in the database
  * and if it's right, check if the password is correct or not
@@ -17,7 +26,7 @@ function checkLogin($usr, $pwd)
 	$users = getAllUsers();
 	foreach ($users as $user) {
 		if ($user['email'] == $usr) {
-			if (password_hash($pwd, $user['password']))
+			if (password_verify($pwd, $user['password']))
 				return (true);
 		}
 	}
@@ -32,10 +41,9 @@ function checkLogin($usr, $pwd)
  * @param string $firstname
  * @return void
  */
-function createSession($email, $lastname, $firstname)
+function createSession($email)
 {
 	$_SESSION['email'] = $email;
-	$_SESSION['username'] = $lastname . " " . $firstname;
 }
 
 /**
