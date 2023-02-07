@@ -11,7 +11,7 @@ session_start();
 //Require all controller's files
 require_once 'controllers/admin.php';
 require_once 'controllers/view.php';
-//TODO ENLEVER LE COMMENTAIRE CI-DESSOUS
+//TODO ENLEVER LE COMMENTAIRE CI-DESSOUS LORS DE LA MISE EN PROD
 /**
 if (empty($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] !== "on") {
 	header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);

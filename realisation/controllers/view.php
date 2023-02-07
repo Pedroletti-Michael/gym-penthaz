@@ -53,8 +53,8 @@ function displayDvd()
  */
 function displayAdminPanel()
 {
-	if (isset($_SESSION['username']) && $_SESSION['username'] != '') {
-		require 'view/home.php';
+	if (isset($_SESSION['email']) && $_SESSION['email'] != '') {
+		require 'views/admin.php';
 	} else {
 		displayLogin();
 	}

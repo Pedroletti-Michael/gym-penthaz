@@ -35,6 +35,18 @@ function login($usrMail, $pwd)
 }
 
 /**
+ * Function used to log out from the website
+ * @return void
+ */
+function logOut()
+{
+	$_SESSION = array();
+	session_destroy();
+
+	displayLogin();
+}
+
+/**
  * Function needed to create a new user into the database.
  * This function will be disabled after the devlopment period.
  * @param string $usr

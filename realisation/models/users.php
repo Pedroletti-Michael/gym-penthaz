@@ -5,12 +5,22 @@
  * Description : login page
  **/
 
+/**
+ * Function used to get all the users from the database.
+ * This function will essentially used for user connection.
+ * @return array|bool
+ */
 function getAllUsers()
 {
 	require_once 'models/databaseConnector.php';
 
 	$query = "SELECT `email`, `password` FROM `users`;";
-	return (executeQuery($query));
+	$data = executeQuery($query);
+
+	if (is_array($data))
+		return ($data);
+	else
+		return (false);
 }
 
 
@@ -24,13 +34,16 @@ function getAllUsers()
 function checkLogin($usr, $pwd)
 {
 	$users = getAllUsers();
-	foreach ($users as $user) {
-		if ($user['email'] == $usr) {
-			if (password_verify($pwd, $user['password']))
-				return (true);
+	if (is_array($users)) {
+		foreach ($users as $user) {
+			if ($user['email'] == $usr) {
+				if (password_verify($pwd, $user['password']))
+					return (true);
+			}
 		}
-	}
-	return (false);
+		return (false);
+	} else
+		return (false);
 }
 
 
@@ -44,16 +57,4 @@ function checkLogin($usr, $pwd)
 function createSession($email)
 {
 	$_SESSION['email'] = $email;
-}
-
-/**
- * Function used to log out from the website
- * @return void
- */
-function logOut()
-{
-	$_SESSION = array();
-	session_destroy();
-
-	displayLogin();
 }

@@ -21,8 +21,7 @@
 	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="?">
-				<img src="/views/images/logo.webp" alt="" width="156" height="86"
-					class="d-inline-block align-text-top">
+				<img src="/views/images/logo.webp" alt="" width="156" height="86" class="d-inline-block align-text-top">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,6 +38,11 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="?action=adminPanel">Paramètres</a>
 					</li>
+					<?php if (isset($_SESSION['email']) && $_SESSION['email'] != ''): ?>
+					<li class="nav-item active">
+						<a class="nav-link" href="?action=logOut">Déconnexion</a>
+					</li>
+					<?php endif; ?>
 				</ul>
 			</div>
 		</div>
@@ -48,64 +52,64 @@
 
 	<?= $content; ?>
 
-	<!-- Footbar if needed but surely not -->
-	<footer class="bg-dark text-center text-white">
-		<!-- Copyright -->
-		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-			Copyright © Société de gymnastique Penthaz -
-			<a class="text-white" href="https://gympenthaz.ch/">GymPenthaz.ch</a>
-			- Tous droits réservés -
-			<!-- Facebook -->
-			<a class="btn btn-outline-light btn-floating m-1"
-				href="https://www.facebook.com/Gym-pour-tous-Penthaz-1026161877591526/" role="button"><i
-					class="fab fa-facebook-f"></i></a>
-			<!-- Instagram -->
-			<a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/gympourtouspenthaz/"
-				role="button"><i class="fab fa-instagram"></i></a>
-		</div>
-	</footer>
+		<!-- Footbar if needed but surely not -->
+		<footer class="bg-dark text-center text-white">
+			<!-- Copyright -->
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+				Copyright © Société de gymnastique Penthaz -
+				<a class="text-white" href="https://gympenthaz.ch/">GymPenthaz.ch</a>
+				- Tous droits réservés -
+				<!-- Facebook -->
+				<a class="btn btn-outline-light btn-floating m-1"
+					href="https://www.facebook.com/Gym-pour-tous-Penthaz-1026161877591526/" role="button"><i
+						class="fab fa-facebook-f"></i></a>
+				<!-- Instagram -->
+				<a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/gympourtouspenthaz/"
+					role="button"><i class="fab fa-instagram"></i></a>
+			</div>
+		</footer>
 
 
 
 
-	<!-- Back to top button -->
-	<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
-		<i class="fas fa-arrow-up"></i>
-	</button>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-		crossorigin="anonymous"></script>
+		<!-- Back to top button -->
+		<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+			<i class="fas fa-arrow-up"></i>
+		</button>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+			integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+			integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+			crossorigin="anonymous"></script>
 
-	<script>
-		//Get the button
-		let mybutton = document.getElementById("btn-back-to-top");
+		<script>
+			//Get the button
+			let mybutton = document.getElementById("btn-back-to-top");
 
-		// When the user scrolls down 20px from the top of the document, show the button
-		window.onscroll = function () {
-			scrollFunction();
-		};
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function () {
+				scrollFunction();
+			};
 
-		function scrollFunction() {
-			if (
-				document.body.scrollTop > 20 ||
-				document.documentElement.scrollTop > 20
-			) {
-				mybutton.style.display = "block";
-			} else {
-				mybutton.style.display = "none";
+			function scrollFunction() {
+				if (
+					document.body.scrollTop > 20 ||
+					document.documentElement.scrollTop > 20
+				) {
+					mybutton.style.display = "block";
+				} else {
+					mybutton.style.display = "none";
+				}
 			}
-		}
-		// When the user clicks on the button, scroll to the top of the document
-		mybutton.addEventListener("click", backToTop);
+			// When the user clicks on the button, scroll to the top of the document
+			mybutton.addEventListener("click", backToTop);
 
-		function backToTop() {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		}
-	</script>
+			function backToTop() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
 </body>
 
 </html>
