@@ -2,8 +2,9 @@
 /**
  * Authors : Pedroletti Michael
  * CreationFile date : 02.02.2023
- * Description : login page
+ * Description : File used to manage connection
  **/
+
 
 /**
  * Function used to get all the users from the database.

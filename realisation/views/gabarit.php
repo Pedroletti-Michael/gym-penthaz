@@ -18,33 +18,31 @@
 
 <body>
 	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="?">
-				<img src="/views/images/logo.webp" alt="" width="156" height="86" class="d-inline-block align-text-top">
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ms-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="?action=gallery">Galerie</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="?action=dvd">Les DVDs</a>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="?action=adminPanel">Paramètres</a>
-					</li>
-					<?php if (isset($_SESSION['email']) && $_SESSION['email'] != ''): ?>
-					<li class="nav-item active">
-						<a class="nav-link" href="?action=logOut">Déconnexion</a>
-					</li>
-					<?php endif; ?>
-				</ul>
-			</div>
+	<nav class="navbar navbar-expand-lg twocolordiv">
+		<a class="navbar-brand ms-1" href="?action=home">
+			<img src="/views/images/logo.webp" alt="" width="156" height="86" class="d-inline-block align-text-top">
+		</a>
+		<button class="navbar-toggler me-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="justify-content-end collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav nav-right ms-auto">
+				<li class="nav-red nav-item">
+					<a class="nav-link" href="?action=gallery">Galerie</a>
+				</li>
+				<li class="nav-red nav-item">
+					<a class="nav-link" href="?action=dvd">Les DVDs</a>
+				</li>
+				<li class="nav-red nav-item">
+					<a class="nav-link" href="?action=adminPanel">Paramètres</a>
+				</li>
+				<?php if (isset($_SESSION['email']) && $_SESSION['email'] != ''): ?>
+				<li class="nav-red nav-item">
+					<a class="nav-link" href="?action=logOut">Déconnexion</a>
+				</li>
+				<?php endif; ?>
+			</ul>
 		</div>
 	</nav>
 
@@ -73,7 +71,7 @@
 
 
 		<!-- Back to top button -->
-		<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+		<button type="button" class="btn btn-root-color btn-floating btn-lg" id="btn-back-to-top">
 			<i class="fas fa-arrow-up"></i>
 		</button>
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

@@ -1,3 +1,62 @@
+body {
+	background-color: #fffffe;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+@media screen and (min-width: 720px) {
+	.twocolordiv {
+		background: linear-gradient(to right,
+				#fffffe 0%,
+				#fffffe 30%,
+				#C52A2B 30%,
+				#C52A2B 100%);
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.twocolordiv {
+		background: linear-gradient(to right,
+				#fffffe 0%,
+				#fffffe 40%,
+				#C52A2B 40%,
+				#C52A2B 100%);
+	}
+}
+
+@media screen and (max-width: 470px) {
+	.twocolordiv {
+		background: linear-gradient(to right,
+				#fffffe 0%,
+				#fffffe 50%,
+				#C52A2B 50%,
+				#C52A2B 100%);
+	}
+}
+
+
+.nav-right {
+	align-items: end;
+	padding-right: 0.5em;
+}
+
+.btn-root-color {
+	background-color: #C52A2B !important;
+	color: #EBEBEB !important;
+	border-color: #C52A2B;
+}
+
+.btn-root-color:hover {
+	background-color: #b12627 !important;
+	color: #D9D9D9 !important;
+}
+
+.btn {
+	--bs-btn-bg: #ffd803;
+	--bs-btn-border-color: #ffd803;
+}
+
 #btn-back-to-top {
 	position: fixed;
 	bottom: 20px;
@@ -6,13 +65,18 @@
 }
 
 .bg-std {
-	background-color: #558C8C !important;
+	color: #222525 !important;
+	background-color: #f8f5f2 !important;
+}
+
+.nav-tabs .nav-item {
+	border-color: #232323;
 }
 
 .text-std {
-	color: #cd5c5c !important;
+	color: #222525 !important;
 }
 
 .card-team {
-	background-color: #D1FFFF !important;
+	background-color: #fffffe !important;
 }

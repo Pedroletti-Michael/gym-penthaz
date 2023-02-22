@@ -7,11 +7,12 @@
  **/
 
 ob_start();
-
 ?>
 
-<!-- Section description -->
-<div class=" bg-light pb-5 pt-5">
+
+
+<!-- #region description -->
+<div class="pb-5 pt-5">
 	<div class="container">
 		<div class="row">
 			<div class="col p-2">
@@ -19,6 +20,7 @@ ob_start();
 			</div>
 			<div class="col mt-auto mb-auto p-5">
 				<h1>Qui sommes-nous ?</h1>
+
 				<p>
 					Gym pour Tous, c’est bien là la vocation de notre société. Fondée en 1977, c’est la plus
 					grande de notre joli village. Elle compte aujourd’hui plus de 220 membres.
@@ -30,10 +32,11 @@ ob_start();
 		</div>
 	</div>
 </div>
+<!-- #endregion -->
 
 
 
-<!-- Section horaires -->
+<!-- #region horaires -->
 <div class="bg-std pb-5">
 	<div class="container">
 		<h1 class="text-center pb-4 pt-5">Horaires</h1>
@@ -70,11 +73,13 @@ ob_start();
 			</tbody>
 		</table>
 	</div>
-
 </div>
+<!-- #endregion -->
 
-<!-- Section cours -->
-<div class="bg-light pb-5">
+
+
+<!-- #region cours -->
+<div class="pb-5">
 	<div class="container">
 		<h1 class=" text-center pt-5">Cours disponibles</h1>
 
@@ -153,10 +158,11 @@ ob_start();
 		</div>
 	</div>
 </div>
+<!-- #endregion -->
 
 
 
-<!-- Section équipe -->
+<!-- #region équipe -->
 <div class="bg-std pb-5">
 	<div class="container">
 		<h1 class="text-center pt-5">Présentation de l'équipe</h1>
@@ -285,9 +291,12 @@ ob_start();
 		</div>
 	</div>
 </div>
+<!-- #endregion -->
 
-<!-- Section galerie -->
-<div class="bg-light pb-5 pt-5">
+
+
+<!-- #region galerie -->
+<div class="pb-5 pt-5">
 	<div class="container">
 		<h1 class=" text-center pb-4 pt-5">Galerie photo</h1>
 
@@ -325,9 +334,11 @@ ob_start();
 		</div>
 	</div>
 </div>
+<!-- #endregion -->
 
 
-<!-- Section contact -->
+
+<!-- #region contact -->
 <div class="bg-std pb-5 pt-5">
 	<div class="container">
 		<h1 class=" text-center pb-4 pt-5">Nous contacter</h1>
@@ -355,6 +366,8 @@ ob_start();
 		</form>
 	</div>
 </div>
+<!-- #endregion -->
+
 
 <?php
 $content = ob_get_clean();
